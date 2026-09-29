@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Плохое Фото Кликер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+
+        <!-- Верхняя панель -->
+        <header id="top-bar">
+            <div class="coins">
+                <span class="coin-icon">🪙</span>
+                <span id="coins-count">0</span>
+            </div>
+            <div class="per-click">
+                <span id="per-click-value">+1</span>
+                <span class="per-click-label">за клик</span>
+            </div>
+        </header>
+
+        <div id="content">
+    <nav id="side-buttons">
+        <button class="side-btn" id="btn-cases">КЕЙСЫ</button>
+        <button class="side-btn" id="btn-collection">КОЛЛЕКЦИЯ</button>
+        <button class="side-btn" id="btn-settings">НАСТРОЙКИ</button>
+    </nav>
+    <main>
+        <div id="photo" class="photo">
+            <span class="photo-content" id="photo-content">📷</span>
+        </div>
+    </main>
+</div>
+
+    <!-- ===== МОДАЛКА: КЕЙСЫ ===== -->
+    <div id="cases-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Кейсы</h2>
+            <div class="cases-list" id="cases-list"></div>
+            <button class="close-btn" data-close="cases-modal">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- ===== МОДАЛКА: ВЫПАДЕНИЕ ===== -->
+    <div id="drop-modal" class="modal hidden">
+        <div class="modal-content drop-content">
+            <div class="drop-photo" id="drop-photo">📷</div>
+            <div class="drop-info">
+                <div id="drop-badge" class="badge hidden">НОВОЕ</div>
+                <h2 id="drop-name">—</h2>
+                <p id="drop-rarity">—</p>
+            </div>
+            <button class="action-btn" id="drop-close">Забрать</button>
+        </div>
+    </div>
+
+    <!-- ===== ЭКРАН: КОЛЛЕКЦИЯ ===== -->
+    <div id="collection-screen" class="fullscreen hidden">
+        <header class="screen-header">
+            <button class="back-btn" id="collection-back">← Назад</button>
+            <h2>Коллекция</h2>
+            <div class="spacer"></div>
+        </header>
+        <div class="collection-grid" id="collection-grid"></div>
+    </div>
+
+    <!-- ===== МОДАЛКА: НАСТРОЙКИ ===== -->
+    <div id="settings-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Настройки</h2>
+            <p class="settings-note">Игра про плохое фото и клики.</p>
+            <label class="toggle-row">
+                <input type="checkbox" id="sound-toggle" checked>
+                <span>Звук</span>
+            </label>
+            <label class="toggle-row">
+                <input type="checkbox" id="music-toggle" checked>
+                <span>Музыка</span>
+            </label>
+            <button class="danger-btn" id="reset-btn">Сбросить прогресс</button>
+            <button class="close-btn" data-close="settings-modal">Закрыть</button>
+        </div>
+    </div>
+
+    </div>   <!-- ← закрытие #game -->
+    <script src="game.js"></script>
+</body>
+</html>
